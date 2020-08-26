@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.Tests/WorkingWithVisualStudio.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.Tests/WorkingWithVisualStudio.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.Tests/WorkingWithVisualStudio.Tests.csproj",
+        "projectName": "WorkingWithVisualStudio.Tests",
+        "projectPath": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.Tests/WorkingWithVisualStudio.Tests.csproj",
+        "packagesPath": "/home/galina/.nuget/packages/",
+        "outputPath": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/galina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.csproj": {
+                "projectPath": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.csproj",
+        "projectName": "WorkingWithVisualStudio",
+        "projectPath": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/WorkingWithVisualStudio.csproj",
+        "packagesPath": "/home/galina/.nuget/packages/",
+        "outputPath": "/home/galina/Документы/c#/book_PRO_ASPNETCORE_MVC_2/WorkingWithVisualStudio/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/galina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[3.2.449, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

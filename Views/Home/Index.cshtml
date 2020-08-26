@@ -1,0 +1,38 @@
+@model IEnumerable<WorkingWithVisualStudio.Models.Product>;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <title>Index</title>
+</head>
+<body class="p-1">
+    <h3 class="text-center">Products</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model) {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a asp-action="AddProduct" class="btn btn-primary">
+            Add New Product
+        </a>
+    </div>
+</body>
+</html>
