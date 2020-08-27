@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WorkingWithVisualStudio.Controllers;
 using WorkingWithVisualStudio.Models;
 using Xunit;
+using Moq;
 
 namespace WorkingWithVisualStudio.Tests {
 
@@ -10,12 +11,7 @@ namespace WorkingWithVisualStudio.Tests {
 
         class ModelCompleteFakeRepository : IRepository {
 
-            public IEnumerable<Product> Products { get; } = new Product[] {
-                new Product { Name = "Kayak", Price = 275M },
-                new Product { Name = "Lifejacket", Price = 48.95M },
-                new Product { Name = "Soccer ball", Price = 18.90M },
-                new Product { Name = "Corner flag", Price = 34.95M },
-            };
+            public IEnumerable<Product> Products { get; set; }
 
             public void AddProduct (Product p) {
                 //
@@ -23,11 +19,13 @@ namespace WorkingWithVisualStudio.Tests {
 
         }
 
-        [Fact]
-        public void IndexActionModelIsComplete () {
+        [Theory]
+        [ClassData(typeof(ProductTestData))]
+        public void IndexActionModelIsComplete (Product[] products) {
 
-            HomeController controller = new HomeController ();
-            controller.Repository = new ModelCompleteFakeRepository();
+            var mock = new Mock<IRepository>();
+            mock.SetupGet(m => m.Products).Returns(products);
+            var controller = new HomeController { Repository = mock.Object };
 
             var model = (controller.Index () as ViewResult)?.ViewData.Model as IEnumerable<Product>;
 
@@ -36,7 +34,21 @@ namespace WorkingWithVisualStudio.Tests {
                 model,
                 Comparer.Get<Product> ((p1, p2) => p1.Name == p2.Name && p1.Price == p2.Price)
             );
+        }
 
+        [Fact]
+        public void RepositoryCalledOnce() {
+            var mock = new Mock<IRepository>();
+            mock.SetupGet(m => m.Products).Returns(
+                new[] {
+                    new Product { Name = "P1", Price = 100 }
+                }
+            );
+            var controller = new HomeController { Repository = mock.Object };
+
+            var result = controller.Index();
+
+            mock.VerifyGet(m => m.Products, Times.Once);
         }
 
     }

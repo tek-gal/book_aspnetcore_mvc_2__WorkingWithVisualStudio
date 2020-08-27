@@ -8,8 +8,7 @@ namespace WorkingWithVisualStudio.Controllers {
         
         public IRepository Repository { get; set; } = SimpleRepository.SharedRepository;
 
-        public IActionResult Index() =>
-            View(SimpleRepository.SharedRepository.Products);
+        public IActionResult Index() => View(Repository.Products);
 
         [HttpGet]
         public IActionResult AddProduct() => View(new Product());
